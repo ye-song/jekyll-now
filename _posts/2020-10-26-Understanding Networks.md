@@ -16,7 +16,7 @@ the frame and sends it out into the network. Data is sent in discrete chunks of 
 
 A frame can be segmented and represented as follow:
 
-![Packet.png]({{site.baseurl}}/_posts/Packet.png)
+![Packet.png]({{site.url}}/_posts/Packet.png)
 
 
 ### Media Access Control
