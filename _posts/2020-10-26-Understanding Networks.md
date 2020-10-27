@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Understanding Networks
+categories: Networking
+tags: 
 published: true
 ---
 ## Network Models
