@@ -9,7 +9,7 @@ published: true
 
 There are 2 main network models. The Open Systems Interconnection (OSI) 7-layer model and the Transmission Control Protocol/Internet Protocol (TCP/IP) model. These models help us to understand better how networks function and they are compared in the following table.
 
-![OSI vs TCP_IP model.png](https://raw.githubusercontent.com/ye-song/ye-song.github.io/master/_posts/OSI%20vs%20TCP_IP%20model.png)
+![OSI vs TCP_IP model.png]({{site.baseurl}}/images/network/OSI%20vs%20TCP_IP%20model.png)
 
 ## Network Packet
 
@@ -18,7 +18,7 @@ the frame and sends it out into the network. Data is sent in discrete chunks of 
 
 A frame can be segmented and represented as follow:
 
-![Packet.png](https://raw.githubusercontent.com/ye-song/ye-song.github.io/master/_posts/Packet.png)
+![Packet.png]({{site.baseurl}}/images/network/Packet.png)
 
 
 ### Media Access Control
