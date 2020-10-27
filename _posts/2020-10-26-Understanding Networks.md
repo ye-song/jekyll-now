@@ -1,8 +1,8 @@
 ---
+layout: post
+title: Understanding Networks
 published: true
 ---
-# Understanding Networks
-
 ## Network Models
 
 There are 2 main network models. The Open Systems Interconnection (OSI) 7-layer model and the Transmission Control Protocol/Internet Protocol (TCP/IP) model. These models help us to understand better how networks function and they are compared in the following table.
