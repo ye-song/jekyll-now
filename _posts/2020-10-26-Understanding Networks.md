@@ -25,9 +25,9 @@ _**MAC (Media Access Control)**_ address is the physical address of a device, it
 
 Frames have a destination and source MAC address. NICs use MAC addresses to decide whether or not to process a frame. _**CRC (Cyclic redundancy check)**_ is used as a way to check that the data is good. If the packet is corrupted it will be resent. 
 
--**Broadcast** happens when the MAC address on the frame is recognized by all the NICs in the network.
+- **Broadcast** happens when the MAC address on the frame is recognized by all the NICs in the network.
 
--**Unicast** happens when the MAC address on the frame has a specific destination. 
+- **Unicast** happens when the MAC address on the frame has a specific destination. 
 
 Anytime you have a group of computers that can hear each other’s broadcast, they are in a broadcast domain. Anytime you plug into a hub, all the computers on that hub are going to be a member of a single broadcast domain. The MAC address for a broadcast is all F’s and it looks like this FF-FF-FF-FF-FF-FF.
     
