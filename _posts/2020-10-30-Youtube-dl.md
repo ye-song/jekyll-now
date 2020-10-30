@@ -53,7 +53,8 @@ $ youtube-dl --list-formats https://www.youtube.com/watch?v=yJg-Y5byMMw
 $ youtube-dl -F https://www.youtube.com/watch?v=yJg-Y5byMMw
 
 7. To download videos in specific quality and format. Note that the following options may be available but not always.
-| Option | Remarks|
+
+|Option|Remarks|
 |:---:|:---:|
 |best|select the best quality format for the given file with video and audio|
 |worst|select the worst quality format of the given file with video and audio|
