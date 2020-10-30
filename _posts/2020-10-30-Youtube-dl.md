@@ -26,11 +26,11 @@ $ sudo youtube-dl -U
 
 ### Using Youtube-dl
 
-1. To download a video
+#### 1. To download a video
 
 $ youtube-dl https://www.youtube.com/watch?v=yJg-Y5byMMw
 
-2. To download a video and save with a specific name
+#### 2. To download a video and save with a specific name
 
 $ youtube-dl -o 'Warriyo - Mortals (feat. Laura Brehm)[NCS]' https://www.youtube.com/watch?v=yJg-Y5byMMw
 
