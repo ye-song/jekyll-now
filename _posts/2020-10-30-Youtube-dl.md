@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Youtube Downloader!
+title: Youtube Downloader
 categories: Linux
 tags: [command line],[linux application]
 published: true
