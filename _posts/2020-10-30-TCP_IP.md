@@ -1,0 +1,54 @@
+---
+published: false
+---
+## TCP/IP - Transmission Control Protocol / Internet Protocol
+
+TCP/IP is a networking protocol that allows two computers to communicate. Lets begin with IP addresses.
+
+An An IP address is a string of 32 ones and zeros.
+To convert 11101010 to a number
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|:---:|:--:|:--:|:--:|:-:|:-:|:-:|:-:|
+|  1  |  1 |  1 |  0 | 1 | 0 | 1 | 0 |
+
+128 + 64 + 32 + 8 + 2 = 234
+
+To convert 131 to a binary number,
+
+131 - 28 = 3
+
+3 - 2 = 1
+
+1 - 1 = 0
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|:---:|:--:|:--:|:--:|:-:|:-:|:-:|:-:|
+|  1  |  0 |  0 |  0 | 0 | 0 | 1 | 1 |
+
+The IP address of a computer or device identifies the device on a particular network.
+
+The network ID is the part of the network numbering system that has to be identical for every computer on that particular network.
+
+Take for example the IP 232.25.208.15, this IP belongs to a particular device.
+
+**232.25.208.0** is the network ID, the idea is that no computer can have just a 0 as part of its numbering system as it is reserved for the network ID.
+
+The part that changes for every individual computer is called the host ID.
+
+A subnet mask is a string of 1’s followed by a certain number of 0’s.
+
+255.255.255.000 – this is a /24 (pronounced as ‘wack 24’) subnet mask, we can have 254 hosts here (2^8 -2)
+
+>_We can’t use 255 and 0 in our addressing because the IP address 0.0.0.0 is used as a wildcard to bind to all addresses while the IP address 255.255.255.255 is used to indicate a local broadcast.To understand more about the reason you can read about [classful network design](https://en.wikipedia.org/wiki/Classfulnetwork) and [CIDR](https://en.wikipedia.org/wiki/ClasslessInter-DomainRouting)._
+
+
+255.255.000.000 – this is a /16 (pronounced as ‘wack 16’) subnet mask, we can have 65534 hosts here (2^16 -2)
+
+The subnet mask get smaller for larger networks and it gets bigger for smaller networks.
+
+The subnet mask allows the local machine to know if the destination is on the local network or a remote network.
+
+The default gateway is the address of your router.
+
+Each host knows the default gateway so that it can forward traffic to remote networks.
