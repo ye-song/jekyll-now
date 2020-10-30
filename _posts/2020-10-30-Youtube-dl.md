@@ -1,9 +1,9 @@
 ---
-published: true
 layout: post
 title: Youtube Downloader!
 categories: Linux
 tags: [command line],[linux application]
+published: true
 ---
 
 Youtube-dl is an open source program written in Python for the command line but it does more than just download audio and video from youtube.
