@@ -7,6 +7,8 @@ category: Linux Application
 
 Youtube-dl is an open source program written in Python for the command line but it does more than just download audio and video from youtube.
 
+The official site of youtube-dl is at https://yt-dl.org/download.html
+
 ### Installing Youtube-dl
 
 Using Curl
