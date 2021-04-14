@@ -16,7 +16,9 @@ The steps taken to do the plot is as follow:
 3. Using linregress function from stats module under scipy library, we obtain the line of best fit and find the gradient and y-axis intercept
 4. We then generate additional data until year 2050 and plot the line.
 5. We then observe that from year 2000 onwards, the scatter seems to deviate more from the line.
-6. Using linregress again, we find the gradient and y-axis intercept of the line of best fit for data points from year 2000 to the most current data.
+6. Using linregress again, we find the gradient and y-axis intercept of the line of best fit for data points from year 2000 to 2013.
 7. With this information, we then plot the new trajectory and generate new data for a second line to predict how much the sea level will rise to in 2050 based on this increased rate of change.
 
 ![sea_level_plot.png]({{site.baseurl}}/images/sea_level_predictor/sea_level_plot.png)
+
+If you would like to find out more about my python code, check out the repo [here](https://github.com/ye-song/sea-level-predictor/blob/master/sea_level_predictor.py)
