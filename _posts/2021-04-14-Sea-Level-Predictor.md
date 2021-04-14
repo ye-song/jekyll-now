@@ -18,3 +18,5 @@ The steps taken to do the plot is as follow:
 5. We then observe that from year 2000 onwards, the scatter seems to deviate more from the line.
 6. Using linregress again, we find the gradient and y-axis intercept of the line of best fit for data points from year 2000 to the most current data.
 7. With this information, we then plot the new trajectory and generate new data for a second line to predict how much the sea level will rise to in 2050 based on this increased rate of change.
+
+![sea_level_plot.png]({{site.baseurl}}/images/sea_level_predictor/sea_level_plot.png)
