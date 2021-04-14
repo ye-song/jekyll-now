@@ -8,4 +8,4 @@ I enjoy playing with technology and it is always fun to learn something new. I'm
 
 ### Contact me
 
-If you wanna reach out to me, feel free to PM me on [linkedin](www.linkedin.com/in/songyangen)
+If you wanna reach out to me, feel free to PM me on [linkedin](https://www.linkedin.com/in/songyangen)
