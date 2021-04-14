@@ -11,7 +11,7 @@ The data we are looking at will be the number of page views each day on freeCode
 The dataset that we have consists of 1304 rows and 2 columns, 'date' and 'value' which shows the number of visits in the day.
 
 The steps taken to do the plot is as follow:
-1. Read in the data from the csv file with pandas and parse the date column
+1. Read in the data from the csv file with pandas and parse the date column.
 Note that when you parse the date column, the data type changes.
 2. Plot the line graph with matplotlib
 3. Make a copy of the data frame and convert the date column to string so that you can carry out string manipulation
