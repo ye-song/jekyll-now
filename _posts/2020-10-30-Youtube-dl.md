@@ -42,7 +42,7 @@ $ youtube-dl -o '~/Downloads/Warriyo - Mortals (feat. Laura Brehm)[NCS]' https:/
 #### 4. To download multiple videos
 
 $ youtube-dl <url1> <url2>
-  
+
 #### 5. To download multiple videos by passing a text file with multiple links
 
 $ youtube-dl -a url.txt
@@ -53,11 +53,11 @@ $ youtube-dl --list-formats https://www.youtube.com/watch?v=yJg-Y5byMMw
 
 $ youtube-dl -F https://www.youtube.com/watch?v=yJg-Y5byMMw
 
-#### 7. To download videos in specific quality and format. 
+#### 7. To download videos in specific quality and format.
 
 Note that the following options may be available but not always.
 
-|Option|Remarks|
+|**Option**|**Remarks**|
 |:---:|:---:|
 |best|select the best quality format for the given file with video and audio|
 |worst|select the worst quality format of the given file with video and audio|
