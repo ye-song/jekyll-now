@@ -13,8 +13,8 @@ I will be updating it as and when I add new completed projects. Enjoy! =)
 2. [Survey / Feedback Form](https://ye-song.github.io/Survey-Form/) code repo [here](https://github.com/ye-song/Survey-Form)
 3. [Product Landing Page](https://ye-song.github.io/Product-Landing-Page/) code repo [here](https://github.com/ye-song/Product-Landing-Page)
 
-**Data Analytics**<br>
-Projects here use:<br>
+**Data Analytics**<br><br>
+Projects here use:
 *Python, Pandas, Matplotlib, Numpy, Scipy, Seaborn*
 
 1. [Sea-Level Predictor](https://ye-song.github.io/Sea-Level-Predictor/) write up, Python [Code](https://github.com/ye-song/sea-level-predictor/blob/master/sea_level_predictor.py)
