@@ -28,3 +28,14 @@ Note that seaborn is a visualization library and you can think of it as an exten
 ![box_plot.png]({{site.baseurl}}/images/page_view_visualizer/box_plot.png)
 
 If you would like to find out more about my python code, check out the repo [here](https://github.com/ye-song/page-view-time-series-visualizer/blob/master/time_series_visualizer.py)
+
+**Analysis:**
+
+So based on the 3 plots that we have, we can see that there is clearly an upward trend over the years and this is not a linear growth. So we can see that there is probably a growing demand for web development that more and more people are learning web development.
+
+From the bar chart and the month-wise box plot, we can see that there is somewhat a seasonality to the increase. We can see that in the last quarter of the year there is usually an increase in page views on the forum. So we can guess that in the last quarter of the year, people could be looking at the forums because:
+- People want to learn web development as a growing requirement for their jobs.
+- People could be preparing for a career change.
+- Office work could be slowing down as the year closes and people have more time to focus on personal growth.
+
+So if I were an educator or if I were conducting training in the IT sector, I know that business is good and will continue to grow in the near future and that my business has a certain seasonality to it and I should be aggressive on my Christmas or year end sales strategy.
