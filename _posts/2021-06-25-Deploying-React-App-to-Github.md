@@ -31,14 +31,16 @@ First create a folder where you would like your project to reside in and navigat
 Next in the project folder type:
 > npx create-react-app <name of app>.
 
+<p align="center">
 ![npx_create.png]({{site.baseurl}}/images/React_on_GitHub/npx_create.png)
-
+</p>
+<p align="center">
 ![npx_success.png]({{site.baseurl}}/images/React_on_GitHub/npx_success.png)
-
+</p>
 Once it is completed you will have the following project structure created.
-
+<p align="center">
 ![project_structure.png]({{site.baseurl}}/images/React_on_GitHub/project_structure.png)
-
+</p>
 Note that <i>public/index.html</i> is the page template and <i>src/index.js</i> is the Javascript entry point. For the project to build, these files must exist with the exact filenames. You can delete or rename other files. Also, you need to put any JS and CSS files inside src.
 
 Now you can develop your react app and once you are done you can move on to deployment.
@@ -49,26 +51,30 @@ Before you can deploy, make sure you have Git and GitHub Cli installed locally. 
 
 Once that is done, here are the steps to deploy your react app on GitHub.
 
-Step 1:
+### Step 1: <br/>
 Install the gh-pages package as a “dev-dependency” of the app.
 > npm install gh-pages -- save-dev
 
+<p align="center">
 ![install_gh-pages.png]({{site.baseurl}}/images/React_on_GitHub/install_gh-pages.png)
+</p>
 
-Step 2:
+### Step 2: <br/>
 Add homepage property to package.json file.
 > "homepage": http://{github-username}.github.io/{github-repo-name}
 
+<p align="center">
 ![json_homepage.png]({{site.baseurl}}/images/React_on_GitHub/json_homepage.png)
+</p>
 
-Step 3:
+### Step 3: <br/>
 Add the following scripts to the script section of your package.json file.
-
+<p align="center">
 ![json_scripts.png]({{site.baseurl}}/images/React_on_GitHub/json_scripts.png)
-
+</p>
 The predeploy command bundles the react app while the deploy command deploys the bundled file.
 
-Step 4:
+### Step 4: <br/>
 Initialize and add the GitHub repository as a remote location.
 
 On the CLI type:
@@ -84,13 +90,13 @@ The git remote command let you manage connections with other repositories.
 
 It creates a new connection to a remote repository. After adding a remote, you’ll be able to use {name} as a convenient shortcut for {url} in other Git commands.
 
-Step 5:
+### Step 5: <br/>
 Now deploy to GitHub Pages by typing on the CLI:
 > npm run deploy
 
 This command will create a branch named gh-pages at your GitHub repository. This branch hosts your app while the homepage property you created in package.json file holds your link for a live preview.
 
-Step 6:
+### Step 6: <br/>
 Go to the repository on GitHub, under settings, under the GitHub pages section, change the setup source to the gh-pages branch.
 
 That's it! You have deployed a working react app on GitHub =)
