@@ -6,7 +6,7 @@ tags: React, GitHub
 published: true
 ---
 
-##Setting up your project
+## Setting up your project
 
 We will be using create-react-app to create an app and deploy it on GitHub. Create React App is a pre-build environment that helps you to create single-page React applications. It offers a modern build setup with no configuration.
 You can find out more about the create-react-app [here](https://create-react-app.dev/docs/getting-started).
@@ -43,7 +43,7 @@ Note that <i>public/index.html</i> is the page template and <i>src/index.js</i> 
 
 Now you can develop your react app and once you are done you can move on to deployment.
 
-##Deployment
+## Deployment
 
 Before you can deploy, make sure you have Git and GitHub Cli installed locally. You can install Git [here](https://git-scm.com/) and install GitHub Cli [here](https://github.com/cli/cli). I installed GitHub Cli using the MSI installer. GitHub Cli allows you to execute GitHub commands locally on your windows CLI and Git is needed as a version control to interface your local project with your GitHub repository.
 
