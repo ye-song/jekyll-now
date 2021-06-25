@@ -32,14 +32,14 @@ Next in the project folder type:
 > npx create-react-app <name of app>.
 
 <p align="center">
-![npx_create.png]({{site.baseurl}}/images/React_on_GitHub/npx_create.png)
+  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/npx_create.png">
 </p>
 <p align="center">
-![npx_success.png]({{site.baseurl}}/images/React_on_GitHub/npx_success.png)
+  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/npx_success.png">
 </p>
 Once it is completed you will have the following project structure created.
 <p align="center">
-![project_structure.png]({{site.baseurl}}/images/React_on_GitHub/project_structure.png)
+  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/project_structure.png">
 </p>
 Note that <i>public/index.html</i> is the page template and <i>src/index.js</i> is the Javascript entry point. For the project to build, these files must exist with the exact filenames. You can delete or rename other files. Also, you need to put any JS and CSS files inside src.
 
