@@ -32,10 +32,10 @@ Next in the project folder type:
 > npx create-react-app <name of app>.
 
 <p align="center">
-  <img width="500" height="150" src="{{site.baseurl}}/images/React_on_GitHub/npx_create.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/npx_create.png">
 </p>
 <p align="center">
-  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/npx_success.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/npx_success.png">
 </p>
 Once it is completed you will have the following project structure created.
 <p align="center">
@@ -56,7 +56,7 @@ Install the gh-pages package as a “dev-dependency” of the app.
 > npm install gh-pages -- save-dev
 
 <p align="center">
-  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/install_gh-pages.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/install_gh-pages.png">
 </p>
 
 ### Step 2: <br/>
@@ -70,7 +70,7 @@ Add homepage property to package.json file.
 ### Step 3: <br/>
 Add the following scripts to the script section of your package.json file.
 <p align="center">
-  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/json_scripts.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/json_scripts.png">
 </p>
 The predeploy command bundles the react app while the deploy command deploys the bundled file.
 
