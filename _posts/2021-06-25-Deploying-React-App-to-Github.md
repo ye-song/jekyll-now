@@ -32,14 +32,14 @@ Next in the project folder type:
 > npx create-react-app <name of app>.
 
 <p align="center">
-  <img width="500" height="200" src="{{site.baseurl}}/images/React_on_GitHub/npx_create.png">
+  <img width="500" height="150" src="{{site.baseurl}}/images/React_on_GitHub/npx_create.png">
 </p>
 <p align="center">
   <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/npx_success.png">
 </p>
 Once it is completed you will have the following project structure created.
 <p align="center">
-  <img width="400" height="900" src="{{site.baseurl}}/images/React_on_GitHub/project_structure.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/project_structure.png">
 </p>
 Note that <i>public/index.html</i> is the page template and <i>src/index.js</i> is the Javascript entry point. For the project to build, these files must exist with the exact filenames. You can delete or rename other files. Also, you need to put any JS and CSS files inside src.
 
@@ -64,7 +64,7 @@ Add homepage property to package.json file.
 > "homepage": http://{github-username}.github.io/{github-repo-name}
 
 <p align="center">
-  <img width="500" height="300" src="{{site.baseurl}}/images/React_on_GitHub/json_homepage.png">
+  <img src="{{site.baseurl}}/images/React_on_GitHub/json_homepage.png">
 </p>
 
 ### Step 3: <br/>
