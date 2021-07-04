@@ -23,6 +23,8 @@ Projects here use:
 <br>(In this project, the API call will return the date and time requested in Unix format or UTC format.)
 2. [Header Parser](https://my-ip-microservice.herokuapp.com/) code repo [here](https://github.com/ye-song/Headerparser)
 <br>(In this project, the API call will return your IP address, the language and the browser software being used.)
+3. [Url-Shortener](https://shortadd.herokuapp.com/) code repo [here](https://github.com/ye-song/url-shortener)
+<br>(In this project, MongoDB is used to capture the URL given by the user and generate a short-url number in the schema. This number is then provided to the user as the shortened url. When the user post this number, it is used to search the database and redirect the get request to the original url.)
 
 **Data Analytics**<br><br>
 Projects here use:
