@@ -13,6 +13,12 @@ published: true
     table-layout: fixed;
     width: 100%;
   }
+  .column-one {
+    width: 55%;
+  }
+  .column-two {
+    width: 45%;
+  }
   .table th {
     padding: 12px;
     text-align: center;
@@ -43,6 +49,8 @@ published: true
 Here are some of the most common HTML tags and their uses.
 
 <table class="table">
+  <col class="column-one">
+  <col class="column-two">
   <tr>
     <th>Tags for document structure</th>
     <th>Usage</th>
@@ -53,7 +61,7 @@ Here are some of the most common HTML tags and their uses.
   </tr>
   <tr>
     <td> <span>&lt;head><br>&emsp;&lt;meta charset="utf-8"/><br>&emsp;&lt;title>&lt;/title><br>&emsp;&lt;link>&lt;/link><br>&emsp;&lt;script>&lt;/script><br>&lt;/head></span> </td>
-    <td> The head tag is used to contain all the head elements <br>e.g. link to stylesheets, title, meta, link to external CDNs. </td>
+    <td> The head tag is used to contain all the head elements e.g. link to stylesheets, title, meta, link to external CDNs. </td>
   </tr>
   <tr>
     <td> &lt;header>&lt;/header>  </td>
@@ -69,7 +77,7 @@ Here are some of the most common HTML tags and their uses.
   </tr>
   <tr>
     <td> &lt;h1>&lt;/h1>  </td>
-    <td> Heading tag, used to segregate the different sections <br> or sub-sections of an article. </td>
+    <td> Heading tag, used to segregate the different sections or sub-sections of an article. </td>
   </tr>
   <tr>
     <td> &lt;p>&lt;/p>  </td>
@@ -100,6 +108,8 @@ Here are some of the most common HTML tags and their uses.
 <br>
 
 <table class="table">
+  <col class="column-one">
+  <col class="column-two">
   <tr>
     <th>Tags for adding images and links</th>
     <th>Usage</th>
