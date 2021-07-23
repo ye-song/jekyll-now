@@ -22,7 +22,9 @@ Here are some of the most common HTML tags and their uses.
 |`<hr/>` | Used to display a horizontal line in the document.|
 |`<blockquote></blockquote>` | For creating quotes on the page.|
 |`<!-- -->` | For comments.|
-|`<main></main>`<br>`<header></header>`<br>`<footer></footer>`<br>`<nav></nav>`<br>`<video></video>`<br>`<article></article>`<br>`<section></section>`| Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO.
+|`<main></main>`<br>`<header></header>`<br>`<footer></footer>`<br>`<nav></nav>`<br>`<video></video>`<br>`<article></article>`<br>`<section></section>`| Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO.|
+
+<br>
 
 |    Tags for adding images and links   | Usage |
 | ---       |    ---   |
