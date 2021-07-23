@@ -34,7 +34,6 @@ published: true
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-
 </style>
 
 Here are some of the most common HTML tags and their uses.
@@ -45,51 +44,51 @@ Here are some of the most common HTML tags and their uses.
     <th>Usage</th>
   </tr>
   <tr>
-    <td> &lt!DOCTYPE HTML> <br> &lthtml lang='en'>&lt/html> </td>
+    <td> &lt;!DOCTYPE HTML> <br> &lt;html lang='en'>&lt;/html> </td>
     <td> Used to specify the document is in html. <br> Used to specify the language is English. </td>
   </tr>
   <tr>
-    <td> <span>&lthead><br>&emsp;&ltmeta charset="utf-8"/><br>&emsp;&lttitle>&lt/title><br>&emsp;&ltlink>&lt/link><br>&emsp;&ltscript>&lt/script><br>&lt/head></span> </td>
+    <td> <span>&lt;head><br>&emsp;&lt;meta charset="utf-8"/><br>&emsp;&lt;title>&lt;/title><br>&emsp;&lt;link>&lt;/link><br>&emsp;&lt;script>&lt;/script><br>&lt;/head></span> </td>
     <td> The head tag is used to contain all the head elements <br>e.g. link to stylesheets, title, meta, link to external CDNs. </td>
   </tr>
   <tr>
-    <td> &ltheader>&lt/header>  </td>
+    <td> &lt;header>&lt;/header>  </td>
     <td> Is used for headers as seen in articles. <br> The likes of a newspaper header. </td>
   </tr>
   <tr>
-    <td> &ltbody>&lt/body>  </td>
+    <td> &lt;body>&lt;/body>  </td>
     <td> Body of the article or webpage. </td>
   </tr>
   <tr>
-    <td> &ltdiv>&lt/div>  </td>
+    <td> &lt;div>&lt;/div>  </td>
     <td> A general purpose container for other elements. </td>
   </tr>
   <tr>
-    <td> &lth1>&lt/h1>  </td>
+    <td> &lt;h1>&lt;/h1>  </td>
     <td> Heading tag, used to segregate the different sections <br> or sub-sections of an article. </td>
   </tr>
   <tr>
-    <td> &ltp>&lt/p>  </td>
+    <td> &lt;p>&lt;/p>  </td>
     <td> Used to denote a paragraph. </td>
   </tr>
   <tr>
-    <td> &ltbr> </td>
+    <td> &lt;br> </td>
     <td> Used to break the line. </td>
   </tr>
   <tr>
-    <td> &lthr/> </td>
+    <td> &lt;hr/> </td>
     <td> Used to display a horizontal line in the document. </td>
   </tr>
   <tr>
-    <td> &ltblockquote>&lt/blockquote> </td>
+    <td> &lt;blockquote>&lt;/blockquote> </td>
     <td> For creating quotes on the page. </td>
   </tr>
   <tr>
-    <td> &lt!-- --> </td>
+    <td> &lt;!-- --> </td>
     <td> For comments. </td>
   </tr>
   <tr>
-    <td> &ltmain>&lt/main><br>&ltheader>&lt/header><br>&ltfooter>&lt/footer><br>&ltnav>&lt/nav><br>&ltvideo>&lt/video><br>&ltarticle>&lt/article><br>&ltsection>&lt/section> </td>
+    <td> &lt;main>&lt;/main><br>&lt;header>&lt;/header><br>&lt;footer>&lt;/footer><br>&lt;nav>&lt;/nav><br>&lt;video>&lt;/video><br>&lt;article>&lt;/article><br>&lt;section>&lt;/section> </td>
     <td> Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO. </td>
   </tr>
 
