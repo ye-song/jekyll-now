@@ -10,13 +10,13 @@ published: true
     font-family: Helvetica;
     border: px solid black;
     border-collapse: collapse;
-    width: 800px;
+    width: 100%;
   }
   .table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    text-color: white;
+    color: white;
     background-color: #0d58e9;
   }
   .table td {
