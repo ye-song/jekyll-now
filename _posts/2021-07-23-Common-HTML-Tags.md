@@ -14,10 +14,10 @@ published: true
     width: 100%;
   }
   .column-one {
-    width: 55%;
+    width: 45%;
   }
   .column-two {
-    width: 45%;
+    width: 55%;
   }
   .table th {
     padding: 12px;
@@ -116,7 +116,7 @@ Here are some of the most common HTML tags and their uses.
   </tr>
   <tr>
     <td> &lt;img alt="relaxing cat" src="https://www.freecatphotoapp.com/your-image.jpg"> </td>
-    <td> All img elements must have an alt attribute. The text inside an alt attribute <br> is used for screen readers to improve accessibility and is displayed if hte image fails to load. </td>
+    <td> All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if hte image fails to load. </td>
   </tr>
   <tr>
     <td> &lt;a href="https://www.freecodecamplorg">...&lt;/a> <br><br> &lt;a href="https://www.freecodecamp.org" target="_blank"> ...&lt;/a> </td>
