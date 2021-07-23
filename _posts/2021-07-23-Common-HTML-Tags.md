@@ -5,24 +5,94 @@ category: HTML
 tags: HTML
 published: true
 ---
+<style>
+  .table {
+    font-family: Helvetica;
+    border: px solid black;
+    border-collapse: collapse;
+    width: auto;
+  }
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0d58e9;
+  }
+  .table tr:nth-child(even){background-color: #f2f2f2;}
+  .table tr:hover {background-color: #ddd;}
+
+  span.highlight {
+    background: #ADD6FF;
+  }
+
+  span.begin {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  span.end {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+</style>
+
 Here are some of the most common HTML tags and their uses.
 
+<table class="table">
+  <tr>
+    <th>Tags for document structure</th>
+    <th>Usage</th>
+  </tr>
+  <tr>
+    <td> &lt!DOCTYPE HTML> <br> &lthtml lang='en'>&lt/html> </td>
+    <td> Used to specify the document is in html. <br> Used to specify the language is English. </td>
+  </tr>
+  <tr>
+    <td> <span>&lthead><br>&emsp;&ltmeta charset="utf-8"/><br>&emsp;&lttitle>&lt/title><br>&emsp;&ltlink>&lt/link><br>&emsp;&ltscript>&lt/script><br>&lt/head></span> </td>
+    <td> The head tag is used to contain all the head elements <br>e.g. link to stylesheets, title, meta, link to external CDNs. </td>
+  </tr>
+  <tr>
+    <td> &ltheader>&lt/header>  </td>
+    <td> Is used for headers as seen in articles. <br> The likes of a newspaper header. </td>
+  </tr>
+  <tr>
+    <td> &ltbody>&lt/body>  </td>
+    <td> Body of the article or webpage. </td>
+  </tr>
+  <tr>
+    <td> &ltdiv>&lt/div>  </td>
+    <td> A general purpose container for other elements. </td>
+  </tr>
+  <tr>
+    <td> &lth1>&lt/h1>  </td>
+    <td> Heading tag, used to segregate the different sections <br> or sub-sections of an article. </td>
+  </tr>
+  <tr>
+    <td> &ltp>&lt/p>  </td>
+    <td> Used to denote a paragraph. </td>
+  </tr>
+  <tr>
+    <td> &ltbr> </td>
+    <td> Used to break the line. </td>
+  </tr>
+  <tr>
+    <td> &lthr/> </td>
+    <td> Used to display a horizontal line in the document. </td>
+  </tr>
+  <tr>
+    <td> &ltblockquote>&lt/blockquote> </td>
+    <td> For creating quotes on the page. </td>
+  </tr>
+  <tr>
+    <td> &lt!-- --> </td>
+    <td> For comments. </td>
+  </tr>
+  <tr>
+    <td> &ltmain>&lt/main><br>&ltheader>&lt/header><br>&ltfooter>&lt/footer><br>&ltnav>&lt/nav><br>&ltvideo>&lt/video><br>&ltarticle>&lt/article><br>&ltsection>&lt/section> </td>
+    <td> Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO. </td>
+  </tr>
 
-
-|   <div style="width:290px">Tags for document structure </div>   | Usage |
-| ---       |    ---   |
-| `<!DOCTYPE HTML>`<br>`<html lang='en'></html>`| Used to specify the document is in html. <br> Used to specify the language is English.        |
-| `<head>`<br>&emsp;`<meta charset="utf-8"/>`<br>&emsp;`<title></title>`<br>&emsp;`<link></link>`<br>&emsp;`<script></script>`<br>`</head>`   | The head tag is used to contain all the head elements <br>e.g. link to stylesheets, title, meta, linke to external CDNs.       |
-| `<header></header>` | Is used for headers as seen in articles. <br> The likes of a newspaper header.|
-|`<body></body>` | Body of the article or webpage. |
-|`<div></div>` | A general purpose container for other elements.|
-|`<h1></h1>` | Heading tag, used to segregate the different sections <br> or sub-sections of an article.|
-| `<p></p>` | Used to denote a paragraph.|
-| `<br>` | Used to break the line.|
-|`<hr/>` | Used to display a horizontal line in the document.|
-|`<blockquote></blockquote>` | For creating quotes on the page.|
-|`<!-- -->` | For comments.|
-|`<main></main>`<br>`<header></header>`<br>`<footer></footer>`<br>`<nav></nav>`<br>`<video></video>`<br>`<article></article>`<br>`<section></section>`| Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO.|
 
 <br>
 
