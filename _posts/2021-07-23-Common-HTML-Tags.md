@@ -10,6 +10,7 @@ published: true
     font-family: Helvetica, sans-serif, Arial;
     border: px solid black;
     border-collapse: collapse;
+    layout: fixed;
     width: 100%;
   }
   .table th {
