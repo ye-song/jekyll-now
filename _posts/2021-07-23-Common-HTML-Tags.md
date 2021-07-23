@@ -10,7 +10,7 @@ published: true
     font-family: Helvetica;
     border: px solid black;
     border-collapse: collapse;
-    width: auto;
+    width: 800px;
   }
   .table th {
     padding-top: 12px;
