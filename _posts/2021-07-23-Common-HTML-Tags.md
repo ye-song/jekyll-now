@@ -7,7 +7,7 @@ published: true
 ---
 <style>
   .table {
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif, Arial;
     border: px solid black;
     border-collapse: collapse;
     width: 100%;
@@ -16,7 +16,7 @@ published: true
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    color: white;
+    color: #fff;
     background-color: #0d58e9;
   }
   .table td {
@@ -95,13 +95,29 @@ Here are some of the most common HTML tags and their uses.
     <td> &lt;main>&lt;/main><br>&lt;header>&lt;/header><br>&lt;footer>&lt;/footer><br>&lt;nav>&lt;/nav><br>&lt;video>&lt;/video><br>&lt;article>&lt;/article><br>&lt;section>&lt;/section> </td>
     <td> Some HTML 5 elements that give a descriptive <br> structure to HTML and help with SEO. </td>
   </tr>
-
+</table>
 
 <br>
 
-|    Tags for adding images and links   | Usage |
-| ---       |    ---   |
-|`<img alt="relaxing cat" src="https://www.freecatphotoapp.com/your-image.jpg">`| All img elements must have an alt attribute. The text inside an alt attribute <br> is used for screen readers to improve accessibility and is displayed if hte image fails to load.|
-|`<a href="https://www.freecodecamplorg">this links to freecodecamp.org</a>` <br><br> `<a href="https://www.freecodecamp.org" target="_blank"> ...</a>` | Anchor elements are used to link to content outside of the webpage and has an href attribute. <br><br> The "_blank" target attribute tells the browser to open the link in a new tab.|
-|`<a href="#contacts-header">Contacts</a>`<br>...<br>`<h2 id="contacts-header">Contacts</h2>`|You can also use the `<a>` tag to link to an internal section of the page through id attributes.|
-|`<a href="#"><img src="https://www.bit.ly/fcc-running-cats"` <br> `alt="Three kittens running towards the camera."></a>` | You can turn an image into a link by nesting it in an `<a>` tag. A "#" in the href makes it a dead link.|
+<table class="table">
+  <tr>
+    <th>Tags for adding images and links</th>
+    <th>Usage</th>
+  </tr>
+  <tr>
+    <td> &lt;img alt="relaxing cat" src="https://www.freecatphotoapp.com/your-image.jpg"> </td>
+    <td> All img elements must have an alt attribute. The text inside an alt attribute <br> is used for screen readers to improve accessibility and is displayed if hte image fails to load. </td>
+  </tr>
+  <tr>
+    <td> &lt;a href="https://www.freecodecamplorg">this links to freecodecamp.org&lt;/a><br><br> &lt;a href="https://www.freecodecamp.org" target="_blank"> ...&lt;/a> </td>
+    <td> Anchor elements are used to link to content outside of the webpage and has an href attribute. <br><br> The "_blank" target attribute tells the browser to open the link in a new tab. </td>
+  </tr>
+  <tr>
+    <td> &lt;a href="#contacts-header">Contacts&lt;/a><br>...<br>&lt;h2 id="contacts-header">Contacts&lt;/h2> </td>
+    <td> You can also use the &lt;a> tag to link to an internal section of the page through id attributes. </td>
+  </tr>
+  <tr>
+    <td> &lt;a href="#">&lt;img src="https://www.bit.ly/fcc-running-cats" <br> alt="Three kittens running towards the camera.">&lt;/a> </td>
+    <td> You can turn an image into a link by nesting it in an &lt;a> tag. A "#" in the href makes it a dead link. </td>
+  </tr>
+</table>
