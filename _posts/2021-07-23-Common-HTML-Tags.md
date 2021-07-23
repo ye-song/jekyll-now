@@ -31,19 +31,14 @@ published: true
   .table tr:nth-child(even){background-color: #f2f2f2;}
   .table tr:hover {background-color: #ddd;}
 
-  span.highlight {
-    background: #ADD6FF;
-  }
-
-  span.begin {
+  .highlight {
+    background: rgba(#1c1d49, 0.79);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-  }
-
-  span.end {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+
 </style>
 
 Here are some of the most common HTML tags and their uses.
@@ -60,7 +55,7 @@ Here are some of the most common HTML tags and their uses.
     <td> Used to specify the document is in html. <br> Used to specify the language is English. </td>
   </tr>
   <tr>
-    <td> <span>&lt;head><br>&emsp;&lt;meta charset="utf-8"/><br>&emsp;&lt;title>&lt;/title><br>&emsp;&lt;link>&lt;/link><br>&emsp;&lt;script>&lt;/script><br>&lt;/head></span> </td>
+    <td> <span class="highlight">&lt;head><br>&emsp;&lt;meta charset="utf-8"/><br>&emsp;&lt;title>&lt;/title><br>&emsp;&lt;link>&lt;/link><br>&emsp;&lt;script>&lt;/script><br>&lt;/head></span> </td>
     <td> The head tag is used to contain all the head elements e.g. link to stylesheets, title, meta, link to external CDNs. </td>
   </tr>
   <tr>
