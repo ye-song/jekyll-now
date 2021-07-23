@@ -9,7 +9,7 @@ Here are some of the most common HTML tags and their uses.
 
 
 
-|    Tags for document structure   | Usage |
+|   <div style="width:290px">Tags for document structure </div>   | Usage |
 | ---       |    ---   |
 | `<!DOCTYPE HTML>`<br>`<html lang='en'></html>`| Used to specify the document is in html. <br> Used to specify the language is English.        |
 | `<head>`<br>&emsp;`<meta charset="utf-8"/>`<br>&emsp;`<title></title>`<br>&emsp;`<link></link>`<br>&emsp;`<script></script>`<br>`</head>`   | The head tag is used to contain all the head elements <br>e.g. link to stylesheets, title, meta, linke to external CDNs.       |
