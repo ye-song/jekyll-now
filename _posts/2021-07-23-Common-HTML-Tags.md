@@ -119,7 +119,7 @@ Here are some of the most common HTML tags and their uses.
     <td> All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if hte image fails to load. </td>
   </tr>
   <tr>
-    <td> &lt;a href="https://www.freecodecamp.org">......&lt;/a><br><br>&lt;a href="https://www.freecodecamp.org" target="_blank">...&lt;/a> </td>
+    <td> &lt;a href="https://www.freecodecamp.org"><br>...&lt;/a><br><br>&lt;a href="https://www.freecodecamp.org" target="_blank">...&lt;/a> </td>
     <td> Anchor elements are used to link to content outside of the webpage and has an href attribute. <br><br> The "_blank" target attribute tells the browser to open the link in a new tab. </td>
   </tr>
   <tr>
