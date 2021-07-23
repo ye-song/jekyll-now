@@ -16,7 +16,11 @@ published: true
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
+    text-color: white;
     background-color: #0d58e9;
+  }
+  .table td {
+    padding: 5px;
   }
   .table tr:nth-child(even){background-color: #f2f2f2;}
   .table tr:hover {background-color: #ddd;}
