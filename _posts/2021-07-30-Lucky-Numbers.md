@@ -23,7 +23,7 @@ Timeout: 6 seconds
 
 Test Cases:
 
-| L | H | Output |
+| **L** | **H** | **Output** |
 |:-----:|:-----:|:-----:|
 | 1  | 10 | 2 |
 | 58 | 72 | 10 |
@@ -119,7 +119,7 @@ Mission accomplished or so I thought. I amended my code happily thinking we've n
 
 Thus began hours of hair pulling. I could not find the problem with my logic or the code in v2 which I've used in v3. We started comparing the results of BF and v2 to try and figure out where the issue was. By the time we crossed the 3 hour mark with no progress, BF started sounding more like a vulgarity to me.
 
-| Number | v2 | BF |
+| **Number** | **v2** | **BF** |
 | :----: | :----: | :----: |
 |100|34|34|
 |1000|434|434|
