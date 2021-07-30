@@ -32,7 +32,7 @@ Test Cases:
 | 92,871,036,442 | 3,363,728,910,382,456 | 1,160,053,175,781,729|
 | 1 | 1,000,000,000,000,000,000 | 264,160,473,575,034,274 |
 
-Below is the initial code I wrote during the interview. It was a quick and simple brute force method. It didn't pass the last two test cases as it timeout and was taking too long for numbers above 1,000,000.
+Below is the initial code I wrote during the interview. It was a quick and simple brute force method. It didn't pass the last two test cases as it timeout and was taking too long for numbers above 1,000,000. (All code in this post is written in Python3)
 
 So version 1 (v1) of the code a.k.a. brute force a.k.a. BF is as below.
 <pre><code>import sys
