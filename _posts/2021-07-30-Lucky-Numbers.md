@@ -142,6 +142,15 @@ I decided to implement the math library for permutations and combinations in pyt
 
 >"Use the library as much as you can, don't write your own code because you can be wrong even if right!"
 
+#### Edit
+A day after completing v3, it suddenly dawned upon me what was causing the rounding off errors. I learnt about it many years before during my programming lectures in University. Basically fractions causes this issue because base 10 numbers cannot be fully represented as base 2 computations in binary accurately. To solve this in v2 just have to cast the calculation to an integer and not leave it as a floating point value by changing the following line:
+
+<pre><code>
+count += 8 ** r * int(factorial(n) / factorial(r) / factorial(n-r))
+</code></pre>
+
+So I tested v2 and the code works fine now as well.
+
 If you are wondering whether I'll share my code, here is v3 and I hope it is perfect. :sunglasses:
 
 <pre><code>import sys
