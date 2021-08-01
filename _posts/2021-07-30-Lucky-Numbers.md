@@ -343,7 +343,7 @@ If you are wondering whether I'll share my code, here is v3 and I hope it is per
                   elif count6 > 0 and count8 > 0:
                       continue
 
-              # if value is 8, add lucky numbers to count and increment position
+              # if value is 8
               elif digits[i] == 8:
                   if count6 == 0 and count8 == 0:
                       count8 += 1
