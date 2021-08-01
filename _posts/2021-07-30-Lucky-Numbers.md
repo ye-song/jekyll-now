@@ -153,7 +153,13 @@ So I tested v2 and the code works fine now as well.
 
 If you are wondering whether I'll share my code, here is v3 and I hope it is perfect. :sunglasses:
 
-<pre><code>import sys
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
+                color: #000000; background-color: #eee;
+                font-size: 12px; border: 1px dashed #999999;
+                line-height: 14px; padding: 5px;
+                overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+import sys
 import math
 '''
 Conceptually 36589 can be broken down to 30000 + 6000 + 500 + 8 + 9 however
@@ -390,4 +396,6 @@ def totalLuck (firstNum, secondNum):
         total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum)
         return total
 
-print (totalLuck (startNum, endNum))</code></pre>
+print (totalLuck (startNum, endNum))
+</code>
+</pre>
