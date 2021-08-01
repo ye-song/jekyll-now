@@ -5,6 +5,23 @@ category: Python
 tags: Python
 published: True
 ---
+<style>
+  .preDefault {
+    font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
+    color: #000000;
+    background-color: #eee;
+    font-size: 14px;
+    border: 1px dashed #999999;
+    line-height: 14px;
+    padding: 5px;
+    overflow: auto;
+    width: 100%
+  }
+  .codeDefault {
+    color:#000000;
+    word-wrap:normal;
+  }
+</style>
 
 I first encountered this question as an interview question. Initially I wanted
 to leave the question as it was after the interview. But after sharing the question with a friend,
@@ -35,23 +52,27 @@ Test Cases:
 Below is the initial code I wrote during the interview. It was a quick and simple brute force method. It didn't pass the last two test cases as it timeout and was taking too long for numbers above 1,000,000. (All code in this post is written in Python3)
 
 So version 1 (v1) of the code a.k.a. brute force a.k.a. BF is as below.
-<pre><code>import sys
-import math
+<pre class="preDefault">
+    <code class="codeDefault">
+        import sys
+        import math
 
-lucky = 0 <br>
-unlucky = 0 <br>
-array =[]
+        lucky = 0 <br>
+        unlucky = 0 <br>
+        array =[]
 
-for num in range (l, h+1):
-    array = [int(a) for a in str(num)]
-    if 6 in array or 8 in array:
-        lucky += 1
-    if 6 in array and 8 in array:
-        unlucky += 1
+        for num in range (l, h+1):
+            array = [int(a) for a in str(num)]
+            if 6 in array or 8 in array:
+                lucky += 1
+            if 6 in array and 8 in array:
+                unlucky += 1
 
 
-total = lucky - unlucky
-print(total)</code></pre>
+        total = lucky - unlucky
+        print(total)
+    </code>
+</pre>
 
 I didn't have enough time during the interview to think and had to move on to other questions so I left it as that. Solving about 66% of the problem is usually good enough for most situations in life since life is far from perfect.
 
@@ -63,34 +84,38 @@ The solution was to count the digits using permutation and combinations, looking
 
 So version 2 (v2) of the code looked like this:
 
-<pre><code>import sys
-import math
+<pre class="preDefault">
+    <code class="codeDefault">
+        import sys
+        import math
 
-print("What is your starting number?")
-startNum = int(input("Start: "))
-print("What is your ending number?")
-endNum = int(input("End: "))
+        print("What is your starting number?")
+        startNum = int(input("Start: "))
+        print("What is your ending number?")
+        endNum = int(input("End: "))
 
-# a function that calculates factorial
-def factorial (number):
-    sum = 1
-    for i in range(1,number + 1):
-        sum *= i
-    return sum
+        # a function that calculates factorial
+        def factorial (number):
+            sum = 1
+            for i in range(1,number + 1):
+                sum *= i
+            return sum
 
-# a function that counts lucky numbers from 0 to a number
-# where the number is defined as 1 followed with 0s
-def countLuck (numberLength):
-    count = 0
-    n = numberLength - 1
-    # count for the case of 6 in number and double it for 8
-    for i in range(1,n):
-        r = n - i
-        count += 8 ** r * factorial(n) / factorial(r) / factorial(n-r)
-    count += 1
-    print (int(count * 2))
+        # a function that counts lucky numbers from 0 to a number
+        # where the number is defined as 1 followed with 0s
+        def countLuck (numberLength):
+            count = 0
+            n = numberLength - 1
+            # count for the case of 6 in number and double it for 8
+            for i in range(1,n):
+                r = n - i
+                count += 8 ** r * factorial(n) / factorial(r) / factorial(n-r)
+            count += 1
+            print (int(count * 2))
 
-countLuck(len(str(endNum)))</code></pre>
+        countLuck(len(str(endNum)))
+    </code>
+</pre>
 
 Now this code really is quick, shaved off much of the time taken however it could only calculate up to whole numbers starting with the digit 1 and having a string of trailing 0's. Meaning numbers like 100, 1000, 1,000,000, 100,000,000 etc.
 
@@ -145,257 +170,255 @@ I decided to implement the math library for permutations and combinations in pyt
 #### Edit
 A day after completing v3, it suddenly dawned upon me what was causing the rounding off errors. I learnt about it many years before during my programming lectures in University. Basically fractions causes this issue because base 10 numbers cannot be fully represented as base 2 computations in binary accurately. To solve this in v2 just have to cast the calculation to an integer and not leave it as a floating point value by changing the following line:
 
-<pre><code>
-count += 8 ** r * int(factorial(n) / factorial(r) / factorial(n-r))
-</code></pre>
+<pre class="preDefault">
+    <code class="codeDefault">
+        count += 8 ** r * int(factorial(n) / factorial(r) / factorial(n-r))
+    </code>
+</pre>
 
 So I tested v2 and the code works fine now as well.
 
 If you are wondering whether I'll share my code, here is v3 and I hope it is perfect. :sunglasses:
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
-                color: #000000; background-color: #eee;
-                font-size: 12px; border: 1px dashed #999999;
-                line-height: 14px; padding: 5px;
-                overflow: auto; width: 100%">
-<code style="color:#000000;word-wrap:normal;">
-import sys
-import math
-'''
-Conceptually 36589 can be broken down to 30000 + 6000 + 500 + 8 + 9 however
-36001 to 36589 was not counted for lucky numbers so we need to account for
-the number of digits '6' and '8' appearing when counting. Trailing digits after
-a '6' or '8' are lucky while trailing digits after '6' and '8' are unlucky and
-should not be counted.
+<pre class="preDefault">
+    <code class="codeDefault">
+        import sys
+        import math
+        '''
+        Conceptually 36589 can be broken down to 30000 + 6000 + 500 + 8 + 9 however
+        36001 to 36589 was not counted for lucky numbers so we need to account for
+        the number of digits '6' and '8' appearing when counting. Trailing digits after
+        a '6' or '8' are lucky while trailing digits after '6' and '8' are unlucky and
+        should not be counted.
 
-To count lucky numbers for 36589
-0 to 30000 add
-0 to 6000  add, 589 add
-0 to 500 subtract unlucky numbers
-0 to 80 subtract unlucky numbers, 9 subtract
+        To count lucky numbers for 36589
+        0 to 30000 add
+        0 to 6000  add, 589 add
+        0 to 500 subtract unlucky numbers
+        0 to 80 subtract unlucky numbers, 9 subtract
 
-so we need:
-1. A function that counts the lucky numbers
-2. A function that counts unlucky numbers
-3. A function that deals with a chunck of lucky numbers e.g. 6000 to 7000
-4. A function that deals with a chunck of unlucky numbers e.g 86000 to 87000
-'''
-print("What is your starting number?")
-startNum = int(input("Start: "))
-print("What is your ending number?")
-endNum = int(input("End: "))
+        so we need:
+        1. A function that counts the lucky numbers
+        2. A function that counts unlucky numbers
+        3. A function that deals with a chunck of lucky numbers e.g. 6000 to 7000
+        4. A function that deals with a chunck of unlucky numbers e.g 86000 to 87000
+        '''
+        print("What is your starting number?")
+        startNum = int(input("Start: "))
+        print("What is your ending number?")
+        endNum = int(input("End: "))
 
-# This function counts lucky numbers from 0 to a number
-# where the number is of the format (digit * 10 ** n)
-# e.g when counting from 0 to 100, it includes values like 60 and 80
-def countLucky (numberLength):
-    count = 0
-    if numberLength == 1:
-        return count
-    else:
-        n = numberLength - 1 #First digit is not 6 or 8
-    # Count lucky numbers
-    # The number of times '6' appears in the number is denoted by i
-        for i in range(1, n):
-            r = n - i
-            count += 8 ** r * math.comb(n,r)
-        count += 1 # The case when all digits are lucky except the first
-        return (count * 2) # Double for lucky number 8
+        # This function counts lucky numbers from 0 to a number
+        # where the number is of the format (digit * 10 ** n)
+        # e.g when counting from 0 to 100, it includes values like 60 and 80
+        def countLucky (numberLength):
+            count = 0
+            if numberLength == 1:
+                return count
+            else:
+                n = numberLength - 1 #First digit is not 6 or 8
+            # Count lucky numbers
+            # The number of times '6' appears in the number is denoted by i
+                for i in range(1, n):
+                    r = n - i
+                    count += 8 ** r * math.comb(n,r)
+                count += 1 # The case when all digits are lucky except the first
+                return (count * 2) # Double for lucky number 8
 
-# This function counts unlucky numbers from 0 to a number
-# where the number is of the format (digit * 10 ** n)
-# Used when the first digit is not 6 or 8
-def countUnlucky (numberLength):
-    count = 0
-    if numberLength == 1:
-        return count
-    else:
-        n = numberLength - 1
-        # Count unlucky numbers considering first digit is 6 or 8
-        for i in range(n):
-            r = i
-            count += 9 ** r * math.comb(n,r)
-        return count
+        # This function counts unlucky numbers from 0 to a number
+        # where the number is of the format (digit * 10 ** n)
+        # Used when the first digit is not 6 or 8
+        def countUnlucky (numberLength):
+            count = 0
+            if numberLength == 1:
+                return count
+            else:
+                n = numberLength - 1
+                # Count unlucky numbers considering first digit is 6 or 8
+                for i in range(n):
+                    r = i
+                    count += 9 ** r * math.comb(n,r)
+                return count
 
-# This function counts lucky numbers in a range
-# where the number is of the format (digit * 10 ** n)
-# The first digit is 6 or 8
-# e.g. 6000 to 7000 or 800 to 900
-def rangeOfLucky (numberLength):
-    count = 0
-    if numberLength == 1:
-        return count
-    else:
-        n = numberLength - 1
-        # Count lucky numbers considering first digit is 6 or 8
-        for i in range(n+1):
-            r = i
-            count += 8 ** r * math.comb(n,r)
-        count -= 1 # not include number like 6000 or 8000
-        return count
+        # This function counts lucky numbers in a range
+        # where the number is of the format (digit * 10 ** n)
+        # The first digit is 6 or 8
+        # e.g. 6000 to 7000 or 800 to 900
+        def rangeOfLucky (numberLength):
+            count = 0
+            if numberLength == 1:
+                return count
+            else:
+                n = numberLength - 1
+                # Count lucky numbers considering first digit is 6 or 8
+                for i in range(n+1):
+                    r = i
+                    count += 8 ** r * math.comb(n,r)
+                count -= 1 # not include number like 6000 or 8000
+                return count
 
-# This function counts unlucky numbers in a range
-# where the number is of the format (digit * 10 ** n)
-# The first digit is 6 or 8
-# e.g. 6000 to 7000 or 800 to 900
-def rangeOfUnlucky (numberLength):
-    count = 0
-    n = numberLength - 1
-    count = int('1' + '0' * n) - 1
-    return count
+        # This function counts unlucky numbers in a range
+        # where the number is of the format (digit * 10 ** n)
+        # The first digit is 6 or 8
+        # e.g. 6000 to 7000 or 800 to 900
+        def rangeOfUnlucky (numberLength):
+            count = 0
+            n = numberLength - 1
+            count = int('1' + '0' * n) - 1
+            return count
 
 
-# This function loops through a number string and count lucky numbers
-# from 0 to the number string
-def sumLuckyNum (Num):
-        digits = [int(x) for x in str(Num)]
-        numLength = len(digits)
-        count = 0
-        count6 = 0
-        count8 = 0
+        # This function loops through a number string and count lucky numbers
+        # from 0 to the number string
+        def sumLuckyNum (Num):
+                digits = [int(x) for x in str(Num)]
+                numLength = len(digits)
+                count = 0
+                count6 = 0
+                count8 = 0
 
-        for i in range(numLength):
-            # if value is 0
-            if digits[i] == 0:
-                continue
+                for i in range(numLength):
+                    # if value is 0
+                    if digits[i] == 0:
+                        continue
 
-            # if value is less than 6
-            elif digits[i] < 6 and digits[i] > 0:
-                if count6 == 0 and count8 == 0:
-                    count += countLucky (numLength - i) * digits[i]
-                elif count6 > 0 and count8 == 0:
-                    # subtract unlucky numbers, numbers with 8
-                    count -= countUnlucky (numLength - i) * digits[i]
-                elif count6 == 0 and count8 > 0:
-                    # subtract unlucky numbers, numbers with 6
-                    count -= countUnlucky (numLength - i) * digits[i]
-                elif count6 > 0 and count8 > 0:
-                    continue
+                    # if value is less than 6
+                    elif digits[i] < 6 and digits[i] > 0:
+                        if count6 == 0 and count8 == 0:
+                            count += countLucky (numLength - i) * digits[i]
+                        elif count6 > 0 and count8 == 0:
+                            # subtract unlucky numbers, numbers with 8
+                            count -= countUnlucky (numLength - i) * digits[i]
+                        elif count6 == 0 and count8 > 0:
+                            # subtract unlucky numbers, numbers with 6
+                            count -= countUnlucky (numLength - i) * digits[i]
+                        elif count6 > 0 and count8 > 0:
+                            continue
 
-            # if value is 6
-            elif digits[i] == 6:
-                if count6 == 0 and count8 == 0:
-                    count6 += 1
-                    count += countLucky (numLength - i) * digits[i] # multiply 6 groups
-                    # Add 1 for the number like 6000
-                    count += 1
-                    #Add trailing numbers as they are all lucky
-                    if numLength - i >= 2:
-                        s = [str(j) for j in digits[i+1:]]
-                        trailingNum = int("".join(s)) # this removes leading zeroes
-                        count += trailingNum
-                elif count6 > 0 and count8 == 0:
-                    count6 += 1
-                    #subtract unlucky numbers, numbers with 8
-                    count -= countUnlucky (numLength - i) * digits[i]
-                elif count6 == 0 and count8 > 0:
-                    count6 += 1
-                    #subtract unlucky numbers, numbers with 6
-                    count -= countUnlucky (numLength -i) * digits[i]
-                    count -= 1 # subtract for number like 6000
-                    # Subtract unlucky trailing numbers
-                    if numLength - i >= 2:
-                        s = [str(k) for k in digits[i+1:]]
-                        trailingNum = int("".join(s))
-                        count -= trailingNum
-                elif count6 > 0 and count8 > 0:
-                    count6 += 1
-                    continue
+                    # if value is 6
+                    elif digits[i] == 6:
+                        if count6 == 0 and count8 == 0:
+                            count6 += 1
+                            count += countLucky (numLength - i) * digits[i] # multiply 6 groups
+                            # Add 1 for the number like 6000
+                            count += 1
+                            #Add trailing numbers as they are all lucky
+                            if numLength - i >= 2:
+                                s = [str(j) for j in digits[i+1:]]
+                                trailingNum = int("".join(s)) # this removes leading zeroes
+                                count += trailingNum
+                        elif count6 > 0 and count8 == 0:
+                            count6 += 1
+                            #subtract unlucky numbers, numbers with 8
+                            count -= countUnlucky (numLength - i) * digits[i]
+                        elif count6 == 0 and count8 > 0:
+                            count6 += 1
+                            #subtract unlucky numbers, numbers with 6
+                            count -= countUnlucky (numLength -i) * digits[i]
+                            count -= 1 # subtract for number like 6000
+                            # Subtract unlucky trailing numbers
+                            if numLength - i >= 2:
+                                s = [str(k) for k in digits[i+1:]]
+                                trailingNum = int("".join(s))
+                                count -= trailingNum
+                        elif count6 > 0 and count8 > 0:
+                            count6 += 1
+                            continue
 
-            # if value is 7
-            elif digits[i] == 7:
-                if count6 == 0 and count8 == 0:
-                    count += countLucky (numLength - i) * (digits[i] - 1) #multiply 7 groups
-                    count+= 1 # for numbers like 60, 600, 6000 etc
-                    # Add the range 6000 to 7000 for example
-                    count += rangeOfLucky(numLength - i)
-                elif count6 > 0 and count8 == 0:
-                    # subtract unlucky numbers, numbers with 8
-                    count -= countUnlucky (numLength -i) *  digits[i]
-                elif count6 == 0 and count8 > 0:
-                    # subtract unlucky numbers, numbers with 6
-                    count -= countUnlucky (numLength -i) * (digits[i] -1)
-                    count -= rangeOfUnlucky(numLength -i)
-                    count -= 1 ##subtract for number like 6000
-                elif count6 > 0 and count8 > 0:
-                    continue
+                    # if value is 7
+                    elif digits[i] == 7:
+                        if count6 == 0 and count8 == 0:
+                            count += countLucky (numLength - i) * (digits[i] - 1) #multiply 7 groups
+                            count+= 1 # for numbers like 60, 600, 6000 etc
+                            # Add the range 6000 to 7000 for example
+                            count += rangeOfLucky(numLength - i)
+                        elif count6 > 0 and count8 == 0:
+                            # subtract unlucky numbers, numbers with 8
+                            count -= countUnlucky (numLength -i) *  digits[i]
+                        elif count6 == 0 and count8 > 0:
+                            # subtract unlucky numbers, numbers with 6
+                            count -= countUnlucky (numLength -i) * (digits[i] -1)
+                            count -= rangeOfUnlucky(numLength -i)
+                            count -= 1 ##subtract for number like 6000
+                        elif count6 > 0 and count8 > 0:
+                            continue
 
-            # if value is 8, add lucky numbers to count and increment position
-            elif digits[i] == 8:
-                if count6 == 0 and count8 == 0:
-                    count8 += 1
-                    count += countLucky (numLength - i) * (digits[i] - 1) # multiply 7 groups
-                    # Add 1 each for the numbers like 6000 and 8000
-                    count += 2
-                    # Add the range 6*** to 7000 for example
-                    count += rangeOfLucky(numLength - i)
-                    #Add trailing numbers as they are all lucky
-                    if numLength - i >= 2:
-                        s = [str(j) for j in digits[i+1:]]
-                        trailingNum = int("".join(s)) # this removes leading zeroes
-                        count += trailingNum
-                elif count6 > 0 and count8 == 0:
-                    count8 += 1
-                    # subtract unlucky numbers with 8
-                    count -= countUnlucky (numLength -i) * digits[i]
-                    count -= 1 # subtract for number like 8000
-                    # Subtract unlucky trailing numbers
-                    if numLength - i >= 2:
-                        s = [str(k) for k in digits[i+1:]]
-                        trailingNum = int("".join(s))
-                        count -= trailingNum
-                elif count6 == 0 and count8 > 0:
-                    count8 += 1
-                    # subtract unlucky numbers, numbers with 6
-                    count -= countUnlucky (numLength -i) * (digits[i] -1)
-                    count -= rangeOfUnlucky (numLength -i)
-                    count -= 1 #subtract for number like 6000
-                elif count6 > 0 and count8 > 0:
-                    count8 += 1
-                    continue
-
-
-            # if value is 9
-            elif digits[i] == 9:
-                if count6 == 0 and count8 == 0:
-                    count += countLucky (numLength - i) * (digits[i] - 2) # multiply 7 groups
-                    # # Add 1 each for the numbers like 6000 and 8000
-                    count += 2
-                    # Add the range 6000 to 7000 and 8000 to 9000 for example
-                    count += rangeOfLucky(numLength - i) * 2
-                elif count6 > 0 and count8 == 0:
-                    # subtract unlucky numbers, numbers with 8
-                    count -= countUnlucky (numLength -i) * (digits[i] -1)
-                    # subtract for the range 8000 to 9000
-                    count -= rangeOfUnlucky (numLength -i)
-                    count -= 1 # subtract for number like 8000
-                elif count6 == 0 and count8 > 0:
-                    # subtract unlucky numbers, numbers with 6
-                    count -= countUnlucky (numLength -i) * (digits[i] -1)
-                    # subtract for the range 6000 to 7000
-                    count -= rangeOfUnlucky (numLength -i)
-                    count -= 1 # subtract for number like 6000
-                elif count6 > 0 and count8 > 0:
-                    count8 += 1
-                    continue
-
-        return count
+                    # if value is 8, add lucky numbers to count and increment position
+                    elif digits[i] == 8:
+                        if count6 == 0 and count8 == 0:
+                            count8 += 1
+                            count += countLucky (numLength - i) * (digits[i] - 1) # multiply 7 groups
+                            # Add 1 each for the numbers like 6000 and 8000
+                            count += 2
+                            # Add the range 6*** to 7000 for example
+                            count += rangeOfLucky(numLength - i)
+                            #Add trailing numbers as they are all lucky
+                            if numLength - i >= 2:
+                                s = [str(j) for j in digits[i+1:]]
+                                trailingNum = int("".join(s)) # this removes leading zeroes
+                                count += trailingNum
+                        elif count6 > 0 and count8 == 0:
+                            count8 += 1
+                            # subtract unlucky numbers with 8
+                            count -= countUnlucky (numLength -i) * digits[i]
+                            count -= 1 # subtract for number like 8000
+                            # Subtract unlucky trailing numbers
+                            if numLength - i >= 2:
+                                s = [str(k) for k in digits[i+1:]]
+                                trailingNum = int("".join(s))
+                                count -= trailingNum
+                        elif count6 == 0 and count8 > 0:
+                            count8 += 1
+                            # subtract unlucky numbers, numbers with 6
+                            count -= countUnlucky (numLength -i) * (digits[i] -1)
+                            count -= rangeOfUnlucky (numLength -i)
+                            count -= 1 #subtract for number like 6000
+                        elif count6 > 0 and count8 > 0:
+                            count8 += 1
+                            continue
 
 
-def totalLuck (firstNum, secondNum):
-    #check if the starting (first) number is lucky or not
-    digits = [int(x) for x in str(firstNum)]
+                    # if value is 9
+                    elif digits[i] == 9:
+                        if count6 == 0 and count8 == 0:
+                            count += countLucky (numLength - i) * (digits[i] - 2) # multiply 7 groups
+                            # # Add 1 each for the numbers like 6000 and 8000
+                            count += 2
+                            # Add the range 6000 to 7000 and 8000 to 9000 for example
+                            count += rangeOfLucky(numLength - i) * 2
+                        elif count6 > 0 and count8 == 0:
+                            # subtract unlucky numbers, numbers with 8
+                            count -= countUnlucky (numLength -i) * (digits[i] -1)
+                            # subtract for the range 8000 to 9000
+                            count -= rangeOfUnlucky (numLength -i)
+                            count -= 1 # subtract for number like 8000
+                        elif count6 == 0 and count8 > 0:
+                            # subtract unlucky numbers, numbers with 6
+                            count -= countUnlucky (numLength -i) * (digits[i] -1)
+                            # subtract for the range 6000 to 7000
+                            count -= rangeOfUnlucky (numLength -i)
+                            count -= 1 # subtract for number like 6000
+                        elif count6 > 0 and count8 > 0:
+                            count8 += 1
+                            continue
 
-    if 6 in digits and 8 in digits:
-        total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum)
-        return total
-    elif 6 in digits or 8 in digits:
-        total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum) + 1
-        return total
-    else:
-        total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum)
-        return total
+                return count
 
-print (totalLuck (startNum, endNum))
-</code>
+
+        def totalLuck (firstNum, secondNum):
+            #check if the starting (first) number is lucky or not
+            digits = [int(x) for x in str(firstNum)]
+
+            if 6 in digits and 8 in digits:
+                total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum)
+                return total
+            elif 6 in digits or 8 in digits:
+                total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum) + 1
+                return total
+            else:
+                total = sumLuckyNum (secondNum) - sumLuckyNum (firstNum)
+                return total
+
+        print (totalLuck (startNum, endNum))
+    </code>
 </pre>
