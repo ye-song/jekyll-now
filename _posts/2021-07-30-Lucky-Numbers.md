@@ -10,7 +10,7 @@ published: True
     font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
     color: #000000;
     background-color: #eee;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px dashed #999999;
     line-height: 14px;
     padding: 5px;
