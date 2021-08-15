@@ -5,6 +5,23 @@ category: Python
 tags: Python
 published: True
 ---
+<style>
+  .preDefault {
+    font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace;
+    color: #000000;
+    background-color: #eee;
+    font-size: 15px;
+    border: 1px dashed #999999;
+    line-height: 16px;
+    padding: 5px;
+    overflow: auto;
+    width: 100%
+  }
+  .codeDefault {
+    color:#000000;
+    word-wrap:normal;
+  }
+</style>
 
 Video conferencing or web conferencing has been a staple of
 how we socialize and carry out business meetings ever since COVID19.
