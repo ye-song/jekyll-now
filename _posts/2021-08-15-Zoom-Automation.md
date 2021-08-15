@@ -42,7 +42,9 @@ The first script is mouseXY.py. This script will help you to locate the coordina
   <code class="codeDefault">
   #! python3
   # mouseXY.py - Displays the mouse cursor's current position.
+
   import pyautogui
+
   print ("Press Ctrl-C to quit.")
 
   try:
