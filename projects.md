@@ -33,6 +33,11 @@ Projects here use:
 1. [Sea-Level Predictor](https://ye-song.github.io/Sea-Level-Predictor/) write up, Python [Code](https://github.com/ye-song/sea-level-predictor/blob/master/sea_level_predictor.py)
 2. [Page View Visualizer](https://ye-song.github.io/Page-View-Visualizer/) write up, Python [Code](https://github.com/ye-song/page-view-time-series-visualizer/blob/master/time_series_visualizer.py)
 
+**Automation**<br><br>
+Projects here use:
+*Python*
+1. [Zoom Automation](https://ye-song.github.io/Zoom-Automation/)write up, Python [repo](https://github.com/ye-song/zoom-automation)
+
 
 **Augmented Reality**
 1. Playing with augmented reality app development with Unity and Vuforia [here](https://youtu.be/vNy3hk1xOqU) and [here](https://youtu.be/Z7ElGF7F0m0)
