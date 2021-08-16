@@ -36,7 +36,7 @@ Projects here use:
 **Automation**<br><br>
 Projects here use:
 *Python*
-1. [Zoom Automation](https://ye-song.github.io/Zoom-Automation/)write up, Python [repo](https://github.com/ye-song/zoom-automation)
+1. [Zoom Automation](https://ye-song.github.io/Zoom-Automation/) write up, Python [repo](https://github.com/ye-song/zoom-automation)
 
 
 **Augmented Reality**
